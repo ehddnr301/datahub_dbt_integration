@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: Bronze_Customer
+    description: "customer raw 정보가 Bronze 포맷에 맞게 변환됨"
+    columns:
+      - name: BaseDate
+        description: "기준일자"
+        tests:
+          - not_null
+      - name: CustomerId
+        description: "유저 id"
+        tests:
+          - not_null
+      - name: FirstName
+        description: "유저 first_name"
+        tests:
+          - not_null
+      - name: LastName
+        description: "유저 last_name"
+        tests:
+          - not_null
+
+  - name: Bronze_Order
+    description: "order raw 정보가 Bronze 포맷에 맞게 변환됨"
+    columns:
+      - name: BaseDate
+        description: "기준일자"
+        tests:
+          - not_null
+      - name: OrderId
+        description: "주문 id"
+        tests:
+          - not_null
+      - name: UserId
+        description: "유저 user_id"
+        tests:
+          - not_null
+      - name: Status
+        description: "주문 status"
+        tests:
+          - not_null
+
+  - name: Bronze_Payment
+    description: "payment raw 정보가 Bronze 포맷에 맞게 변환됨"
+    columns:
+      - name: BaseDate
+        description: "기준일자"
+        tests:
+          - not_null
+      - name: PaymentId
+        description: "결제 id"
+        tests:
+          - not_null
+      - name: OrderId
+        description: "주문 order_id"
+        tests:
+          - not_null
+      - name: PaymentMethod
+        description: "결제 방법"
+        tests:
+          - not_null
+      - name: Amount
+        description: "결제액"
+        tests:
+          - not_null

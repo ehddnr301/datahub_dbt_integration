@@ -1,0 +1,7 @@
+version: 2
+
+tests:
+  - name: validate_payment_sum
+    title: "KPI와 Raw 데이터의 총 결제액 비교"
+    description: "KPI와 Raw 데이터의 총 결제액이 일치하는지 확인"
+    severity: error

@@ -1,0 +1,14 @@
+source:
+  type: "dbt"
+  config:
+    manifest_path: "/home/${USER}/datahub_dbt/datahub_dbt/target/manifest.json"
+    catalog_path: "/home/${USER}/datahub_dbt/datahub_dbt/target/catalog.json"
+    test_results_path: "/home/${USER}/datahub_dbt/datahub_dbt/target/run_results.json"
+    sources_path: "/home/${USER}/datahub_dbt/datahub_dbt/target/sources.json"
+    target_platform: "postgres"
+    # project_repository: "https://github.com/your_org/dbt_project"
+sink:
+  # DataHub GMS API 서버 정보
+  type: "datahub-rest"
+  config:
+    server: "http://localhost:8080"

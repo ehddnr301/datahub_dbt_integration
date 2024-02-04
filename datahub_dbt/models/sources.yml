@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: linked_server
+    database: postgres
+    schema: dbt
+    tables:
+      - name: raw_customers
+        description: "customer raw 정보가 담김"
+      - name: raw_orders
+        description: "order raw 정보가 담김"
+      - name: raw_payments
+        description: "payment raw 정보가 담김"

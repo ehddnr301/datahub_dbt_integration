@@ -1,0 +1,12 @@
+datahub_dbt:
+  outputs:
+    dev:
+      dbname: postgres
+      host: localhost
+      pass: postgres
+      port: 5431
+      schema: dbt2
+      threads: 1
+      type: postgres
+      user: postgres
+  target: dev

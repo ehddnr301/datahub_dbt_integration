@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: Silver_Customer_Order
+    description: "customer의 order 정보가 Silver 포맷에 맞게 변환됨"
+    columns:
+      - name: BaseDate
+        description: "기준일자"
+        tests:
+          - not_null
+      - name: CustomerId
+        description: "유저 id"
+        tests:
+          - not_null
+      - name: FirstName
+        description: "유저 first_name"
+        tests:
+          - not_null
+      - name: LastName
+        description: "유저 last_name"
+        tests:
+          - not_null
+      - name: OrderId
+        description: "주문 id"
+        tests:
+          - not_null
+      - name: Status
+        description: "주문 status"
+        tests:
+          - not_null
+
+  - name: Silver_Order_Payment
+    description: "order의 payment 정보가 Silver 포맷에 맞게 변환됨"
+    columns:
+      - name: BaseDate
+        description: "기준일자"
+        tests:
+          - not_null
+      - name: OrderId
+        description: "주문 id"
+        tests:
+          - not_null
+      - name: UserId
+        description: "유저 user_id"
+        tests:
+          - not_null
+      - name: Status
+        description: "주문 status"
+        tests:
+          - not_null
+      - name: PaymentMethod
+        description: "결제 방법"
+        tests:
+          - not_null
+      - name: TotalAmount
+        description: "결제액"
+        tests:
+          - not_null
