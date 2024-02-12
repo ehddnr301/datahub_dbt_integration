@@ -1,0 +1,23 @@
+# version: 2
+
+# seeds:
+#   - name: raw_customers
+#     description: This is Raw Customers Seed
+#     docs:
+#       show: true
+#       node_color: #cd7f32
+#     tags: ["raw", "customers"]
+
+#   - name: raw_orders
+#     description: This is Raw Customers Seed
+#     docs:
+#       show: true
+#       node_color: #cd7f32
+#     tags: ["raw", "orders"]
+
+#   - name: raw_payments
+#     description: This is Raw Customers Seed
+#     docs:
+#       show: true
+#       node_color: #cd7f32
+#     tags: ["raw", "payments"]

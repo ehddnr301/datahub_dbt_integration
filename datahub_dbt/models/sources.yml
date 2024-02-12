@@ -1,13 +1,19 @@
 version: 2
 
 sources:
-  - name: linked_server
-    database: postgres
-    schema: dbt
+  - name: airflow
+    database: airflow
+    schema: airflow
     tables:
       - name: raw_customers
         description: "customer raw 정보가 담김"
+        tags: ["raw", "Daily_Main"]
+        meta:
+          owner: "datahub_dwlee"
+          purpose: "raw data"
       - name: raw_orders
         description: "order raw 정보가 담김"
+        tags: ["raw", "Daily_Main"]
       - name: raw_payments
         description: "payment raw 정보가 담김"
+        tags: ["raw", "Daily_Main"]

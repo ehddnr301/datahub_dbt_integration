@@ -1,12 +1,12 @@
 datahub_dbt:
   outputs:
     dev:
-      dbname: postgres
-      host: localhost
-      pass: postgres
-      port: 5431
-      schema: dbt2
+      dbname: airflow
+      host: postgres
+      pass: airflow
+      port: 5432
+      schema: airflow
       threads: 1
       type: postgres
-      user: postgres
+      user: airflow
   target: dev

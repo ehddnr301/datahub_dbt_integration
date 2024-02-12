@@ -14,7 +14,7 @@ WITH raw_payments AS (
     order_id,
     payment_method,
     amount
-  FROM {{ source('linked_server', 'raw_payments') }}
+  FROM {{ source('airflow', 'raw_payments') }}
   WHERE basedate = '{{ var("basedate") }}'
 )
 

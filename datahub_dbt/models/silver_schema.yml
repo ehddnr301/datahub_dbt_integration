@@ -3,6 +3,8 @@ version: 2
 models:
   - name: Silver_Customer_Order
     description: "customer의 order 정보가 Silver 포맷에 맞게 변환됨"
+    config:
+      tags: ["silver", "Daily_Main"]
     columns:
       - name: BaseDate
         description: "기준일자"
@@ -31,6 +33,8 @@ models:
 
   - name: Silver_Order_Payment
     description: "order의 payment 정보가 Silver 포맷에 맞게 변환됨"
+    config:
+      tags: ["silver", "Daily_Main"]
     columns:
       - name: BaseDate
         description: "기준일자"

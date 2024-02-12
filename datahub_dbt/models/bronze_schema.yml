@@ -3,6 +3,8 @@ version: 2
 models:
   - name: Bronze_Customer
     description: "customer raw 정보가 Bronze 포맷에 맞게 변환됨"
+    config:
+      tags: ["bronze", "Daily_Main"]
     columns:
       - name: BaseDate
         description: "기준일자"
@@ -23,6 +25,8 @@ models:
 
   - name: Bronze_Order
     description: "order raw 정보가 Bronze 포맷에 맞게 변환됨"
+    config:
+      tags: ["bronze", "Daily_Main"]
     columns:
       - name: BaseDate
         description: "기준일자"
@@ -43,6 +47,8 @@ models:
 
   - name: Bronze_Payment
     description: "payment raw 정보가 Bronze 포맷에 맞게 변환됨"
+    config:
+      tags: ["bronze", "Daily_Main"]
     columns:
       - name: BaseDate
         description: "기준일자"

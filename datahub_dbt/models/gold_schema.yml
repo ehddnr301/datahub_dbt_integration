@@ -3,6 +3,8 @@ version: 2
 models:
   - name: Gold_UserInfo
     description: "Gold Layer의 UserInfo 데이터"
+    config:
+      tags: ["gold", "Daily_Main"]
     columns:
       - name: BaseDate
         description: "기준일자"
@@ -35,6 +37,8 @@ models:
 
   - name: Gold_KPI
     description: "Gold Layer의 KPI 데이터"
+    config:
+      tags: ["gold", "Daily_Main"]
     columns:
       - name: BaseDate
         description: "기준일자"

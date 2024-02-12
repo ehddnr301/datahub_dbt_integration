@@ -6,20 +6,20 @@ WITH Gold_KPI AS (
     TotalAmount
   FROM {{ ref('Gold_KPI') }}
   WHERE basedate = '{{ var("basedate") }}'
-), Bronze_Payment AS (
+), Silver_Order_Payment AS (
   SELECT
     BaseDate,
-    SUM(Amount) AS TotalAmount
-  FROM {{ ref('Bronze_Payment') }}
+    SUM(TotalAmount) AS TotalAmount
+  FROM {{ ref('Silver_Order_Payment') }}
   WHERE basedate = '{{ var("basedate") }}'
   GROUP BY BaseDate
 ), Comparison AS (
   SELECT Gold_KPI.BaseDate,
     Gold_KPI.TotalAmount AS Gold_TotalAmount,
-    Bronze_Payment.TotalAmount AS Bronze_TotalAmount
+    Silver_Order_Payment.TotalAmount AS Bronze_TotalAmount
   FROM Gold_KPI
-  JOIN Bronze_Payment
-  ON Gold_KPI.BaseDate = Bronze_Payment.BaseDate
+  JOIN Silver_Order_Payment
+  ON Gold_KPI.BaseDate = Silver_Order_Payment.BaseDate
 )
 
 SELECT BaseDate,

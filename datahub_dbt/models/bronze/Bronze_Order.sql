@@ -13,7 +13,7 @@ WITH raw_orders AS (
     id,
     user_id,
     status
-  FROM {{ source('linked_server', 'raw_orders') }}
+  FROM {{ source('airflow', 'raw_orders') }}
   WHERE basedate = '{{ var("basedate") }}'
 )
 

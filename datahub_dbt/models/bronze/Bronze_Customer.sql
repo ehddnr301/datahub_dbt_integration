@@ -13,7 +13,7 @@ WITH raw_customers AS (
     id,
     first_name,
     last_name
-  FROM {{ source('linked_server', 'raw_customers') }}
+  FROM {{ source('airflow', 'raw_customers') }}
   WHERE basedate = '{{ var("basedate") }}'
 )
 
