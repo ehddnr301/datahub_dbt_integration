@@ -4,6 +4,9 @@
     config(
         materialized='incremental',
         on_schema_change='fail',
+        pre_hook=[
+          "{{ delete_BaseDate(this.schema ,this.table, var('basedate')) }}"
+        ]
     )
 }}
 
