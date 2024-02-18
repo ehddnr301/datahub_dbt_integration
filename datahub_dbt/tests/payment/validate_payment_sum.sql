@@ -1,4 +1,4 @@
-{{ config(tags = ['Daily_Main']) }}
+{{ config(tags = ['test-1']) }}
 
 WITH Gold_KPI AS (
   SELECT
